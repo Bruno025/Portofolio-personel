@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Personnel</title>
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+  <script src="https://kit.fontawesome.com/843780e4e7.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+  <!-- Barre de navigation fixe en haut -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Section Profil déroulant -->
+        <li class="profile-dropdown">
+          <li>
+            <div class="profile-toggle">
+              <i class="fa fa-user"></i> Profil
+            </div>
+            <div class="profile-menu">
+              <p><strong>Nom :</strong> AHL</p>
+              <p><strong>Prénom :</strong> Brunel</p>
+              <p><strong>Âge :</strong> XX ans</p>
+              <p><strong>Sexe :</strong> M</p>
+              <div class="social-icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+            </div>
+          </li>          
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Accueil -->
+    <section id="accueil">
+      <div class="intro">
+        <h1>Bienvenue sur mon portfolio</h1>
+        <p>Je suis Brunel, développeur web passionné.</p>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos">
+      <h2>À propos de moi</h2>
+      <p>Je suis étudiant en génie informatique à l'Université d'Ottawa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero maiores neque inventore quibusdam deleniti? Dignissimos, obcaecati? Corrupti, quam magni voluptatibus pariatur ducimus ut repudiandae ipsum quo accusamus fugit quaerat suscipit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est expedita id et, laborum asperiores quae voluptas autem architecto enim nobis perferendis natus eum sequi saepe odit eius quo quaerat consequuntur.</p>
+    </section>
+
+    <section id="competences" class="skills">
+      <h2>Compétences</h2>
+      <div class="skill">
+        <div class="skill-name">
+          <span>HTML & CSS</span><span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="--fill-width:90%;"></div>
+        </div>
+      </div>
+      <!-- Ajoute d’autres compétences de la même façon -->
+    </section>    
+
+    <!-- Section Projets -->
+    <section id="projets">
+      <h2>Mes Projets</h2>
+      <div class="grid-projets">
+        <!-- Exemple de carte de projet -->
+        <article class="projet-card">
+          <img src="img.html/img1.png.png" alt="Capture d'écran du projet 1">
+          <h3>Projet 1</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ullam fuga sed harum, officiis corrupti mollitia iusto consectetur tempore maxime voluptatum inventore iste suscipit dolor nesciunt sunt dolore ipsum earum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis architecto quas, perferendis provident aspernatur doloremque, harum omnis corporis, odit iure et incidunt aperiam voluptate numquam atque ducimus molestias explicabo id?</p>
+        </article>
+        <!-- Autres articles pour chaque projet -->
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.profile-toggle');
+      const menu   = document.querySelector('.profile-menu');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        menu.classList.toggle('open');
+      });
+    });
+    </script>
+    
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Brunel. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
