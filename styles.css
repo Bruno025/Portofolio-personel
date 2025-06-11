@@ -22,9 +22,13 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.8;
-  color: var(--color-dark);
-  background-color: var(--color-bg);
+  color: #fff;            
+  background-color: #000; 
   transition: background-color var(--transition-speed) ease;
+}
+p:first-letter {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 /* Navbar */
@@ -33,13 +37,44 @@ header {
   top: 0;
   width: 100%;
   height: var(--nav-height);
-  background: var(--color-white);
+  background: #1a1a1a;
   display: flex;
   align-items: center;
   padding: 0 2rem;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1.3s linear;
 }
+.logo {
+    width: 140px;
+    height: auto;
+}
+.nav-bar {
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 0;
+  padding-left: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-bar .links a{
+    padding: 8px 17px;
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -53,7 +88,7 @@ nav li {
 }
 nav a {
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-white);
   font-weight: 500;
   padding: 0.5rem;
   transition: color var(--transition-speed);
@@ -82,9 +117,9 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  color: var(--color-dark);
+  padding: 1rem 1rem;
+  font-weight: 600;
+  color: var(--color-bg);
   transition: color var(--transition-speed);
   position: relative;
 }
@@ -99,7 +134,7 @@ nav a:hover::after {
   transition: transform var(--transition-speed) ease;
 }
 .profile-toggle.open::before {
-  transform: rotate(180deg);
+  transform: rotate(300deg);
 }
 .profile-toggle i {
   margin-right: 0.5rem;
@@ -107,22 +142,26 @@ nav a:hover::after {
 }
 
 /* Profile dropdown menu with slide-down animation */
+.profile-dropdown {
+  position: right;
+  display: flex;
+}
 .profile-menu {
   position: absolute;
   top: var(--nav-height);
   right: 2rem;
-  background: var(--color-white);
+  background: #000000;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 15px 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
-  max-height: 0;
+  max-height: 600px;
   opacity: 0;
   transition: max-height var(--transition-speed) ease, opacity var(--transition-speed) ease;
   min-width: 220px;
   z-index: 1001;
 }
 .profile-menu.open {
-  max-height: 300px;
+  max-height: 600px;
   opacity: 1;
 }
 .profile-menu::before {
@@ -184,7 +223,6 @@ main {
   justify-content: center;
   height: calc(100vh - var(--nav-height));
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: var(--color-white);
   text-align: center;
   position: relative;
 }
@@ -195,16 +233,18 @@ main {
   left: 0;
   width: 100%;
   height: 80px;
-  background: var(--color-bg);
+  background-color: #000000;;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 .intro h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   animation: fadeInUp 1s ease-out both;
+  color: #1a1a1a;
 }
 .intro p {
   font-size: clamp(1rem, 2vw, 1.5rem);
   animation: fadeInUp 1.5s ease-out both;
+  color: #1a1a1a;
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -231,14 +271,19 @@ section h2::after {
 }
 
 /* Projects grid */
+.projets {
+  padding: 4rem 2rem;
+  background: #000000;
+  margin-bottom: 10%;
+}
 .grid-projets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 2rem;
+  margin: 10rem;
 }
 .projet-card {
-  background: var(--color-white);
+  background-color: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -294,7 +339,7 @@ section h2::after {
 
 /* Contact form */
 form {
-  background: var(--color-white);
+  background-color: #1a1a1a;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
@@ -335,6 +380,29 @@ form button:hover {
   background: var(--color-primary);
 }
 
+/* Scroll-up*/
+.scroll-up {
+  position: fixed;
+  bottom: 5rem;
+  right: 8rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.scroll-up:hover {
+  color: black;
+  background-color: white;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -343,6 +411,7 @@ footer {
   margin-top: 4rem;
   font-size: 0.9rem;
   color: #888;
+  background-color: #1a1a1a;
 }
 
 /* Responsive adjustments */
@@ -357,24 +426,6 @@ footer {
   }
 }
 
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #1e1e1e;
-    --color-white: #2b2b2b;
-    --color-dark: #f1f1f1;
-  }
-  body {
-    background-color: var(--color-bg);
-    color: var(--color-dark);
-  }
-  header {
-    background: rgba(43,43,43,0.8);
-  }
-  form, .projet-card, footer {
-    background: var(--color-white);
-  }
-
   #apropos {
     padding: 4rem 3rem; 
   }
@@ -385,4 +436,3 @@ footer {
     margin: auto;         
     line-height: 1.8;     
   }
-}

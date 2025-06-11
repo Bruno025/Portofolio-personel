@@ -9,20 +9,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
   <script src="https://kit.fontawesome.com/843780e4e7.js" crossorigin="anonymous"></script> 
 </head>
-<body>
+<body class="dark-mode">
   <!-- Barre de navigation fixe en haut -->
   <header>
-    <nav>
-      <ul>
+    <nav class="nav-bar">
+      <img src="img.html/img2.png" alt="" class="logo">
+      <ul class="links">
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
         <!-- Section Profil déroulant -->
-        <li class="profile-dropdown">
+        <div class="profile-dropdown">
           <li>
             <div class="profile-toggle">
-              <i class="fa fa-user"></i> Profil
+              <i class="fa fa-user"></i> <i>Profil</i>
             </div>
             <div class="profile-menu">
               <p><strong>Nom :</strong> AHL</p>
@@ -37,8 +38,7 @@
               </div>
             </div>
           </li>          
-        </li>
-      </ul>
+        </div>
     </nav>
   </header>
 
@@ -67,16 +67,16 @@
           <div class="skill-fill" style="--fill-width:90%;"></div>
         </div>
       </div>
-      <!-- Ajoute d’autres compétences de la même façon -->
+      <!-- Ajouter d’autres compétences de la même façon -->
     </section>    
 
     <!-- Section Projets -->
-    <section id="projets">
+    <section id="projets" class="projets">
       <h2>Mes Projets</h2>
       <div class="grid-projets">
         <!-- Exemple de carte de projet -->
         <article class="projet-card">
-          <img src="img.html/img1.png.png" alt="Capture d'écran du projet 1">
+          <img src="img.html/img1.png" alt="Capture d'écran du projet 1">
           <h3>Projet 1</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ullam fuga sed harum, officiis corrupti mollitia iusto consectetur tempore maxime voluptatum inventore iste suscipit dolor nesciunt sunt dolore ipsum earum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis architecto quas, perferendis provident aspernatur doloremque, harum omnis corporis, odit iure et incidunt aperiam voluptate numquam atque ducimus molestias explicabo id?</p>
         </article>
@@ -111,7 +111,9 @@
       });
     });
     </script>
-    
+  <div>
+    <a class="scroll-up" href="#accueil">Scroll </i><i class="fas fa-angle-up"></i></a>
+  </div>
   <!-- Pied de page -->
   <footer>
     <p>&copy; 2025 Brunel. Tous droits réservés.</p>

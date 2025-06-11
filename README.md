@@ -28,12 +28,20 @@ Ce dépôt contient le code source d'un **portfolio personnel** développé en *
 ## Structure du projet
 
 ```
-portfolio-personnel/
-├── img.html
-    └── img1.png    # Capture d'écran du projet 1
-├── index.html      # Page principale
-├── README.md       # Documentation du projet 
-└── styles.css      # Feuille de style globale
+portfolio-personnel-animé/
+├── img/
+│   ├── img1.png         # Capture d'écran du projet 1
+│   └── img2.png         # Logo
+├── monportfolio/        # (Dossier pour d'autres projets ou ressources)
+├── venv/                # Environnement virtuel Python (si utilisé)
+├── .vscode/             # Paramètres et extensions VS Code
+├── index.html           # Page principale du portfolio
+├── LICENSE              # Licence MIT
+├── manage.py            # (Présent si projet Python/Django)
+├── README.md            # Documentation du projet
+├── script.js            # Fichier JavaScript principal
+└── styles.css           # Feuille de style globale
+```
 ```
 
 ## Technologies
